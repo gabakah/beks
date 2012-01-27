@@ -1,0 +1,3 @@
+# set register globals
+php_flag register_globals On
+

@@ -1,0 +1,64 @@
+#! /usr/bin/ksh -x
+# The daily run of the PDBs.
+# These jobs will run sequentially to create the PDBs.
+# They are followed by a step that copies the files to their
+# required destinations, and the the oldest library will be deleted afterwards.
+# Job failure notices will be forwarded to the Performance Group.
+# Copyright 2004 Progress Energy - Performance group - C00975
+
+echo 'Start date and time'
+date # This is the start date and time
+
+# Set the directory name to data date
+
+dailydir=$(date --date='1 days ago' +%Y%m%d)
+
+# Set directories
+# worklib="/var/opt/local/perf/mxgwork"
+worklib="/var/opt/local/perf/mxg/mvs"
+pgmlib="/var/opt/local/perf/mxg/programs"
+mxglib="/var/opt/local/perf/mxg"
+loglib="/var/opt/local/perf/mxg/daily/logs"
+
+cd $pgmlib
+
+# Empty existing daily libraries
+
+olddir=$(date --date='90 days ago' +%Y%m%d)
+
+# Create daily PDBs
+
+time sas -autoexec $pgmlib/autoexec.sas -work $worklib -memsize 0 -print $loglib/car_mvs.lst -log $loglib/car_mvs.log $pgmlib/buildpdb_car
+  rc=$?
+  if (($rc > 0)) then
+      sas -log $loglib/notify.log -sysparm 'Carolina MVS' notify
+    else echo 'Carolina PDBs completed successfully at '
+    date
+  fi
+
+time sas -autoexec $pgmlib/autoexec.sas -work $worklib -memsize 0 -print $loglib/fla_mvs.lst -log $loglib/fla_mvs.log $pgmlib/buildpdb_fla
+  rc=$?
+  if (($rc > 0)) then
+      sas -log $loglib/notify.log -sysparm 'Florida MVS' notify
+    else echo 'Florida PDBs completed successfully at '
+    date
+  fi
+
+# Create DB2
+
+# Create CICS
+
+echo 'End of daily build'
+
+# Copy the current files to the required directories
+
+echo 'Start copying the daily files to the appropriate folder names'
+date
+
+time sas -log $loglib/copying.log $pgmlib/copying
+
+echo 'End date and time of the daily PDB job'
+date
+
+# Copy Logs
+cp -rv $loglib/* $mxglib/logs/$dailydir

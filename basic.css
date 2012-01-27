@@ -1,0 +1,190 @@
+@charset "UTF-8";
+html, body {
+	height: 100%;         /* required */
+}
+body {
+	text-align: center;   /* horizontal centering hack for IE */
+	padding: 0;           /* required to "hide" distance div */
+	margin: 0;            /* required to "hide" distance div */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+	color: white;
+	height: 30px;
+	width: 660px;
+	margin: auto;
+}
+
+.menuBanner { 
+	background-image: -moz-linear-gradient(top, #07507D, #085f8C); 
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(#07507D), to(#085f8C));
+	height: 112px;
+	position: relative;
+}
+
+#navlist li {
+	float: left;
+}
+
+ul a {
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-right: 10px;
+	padding-left: 10px;
+	display: block;
+	line-height: 10px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+ul a:hover {
+	color: #FF0;
+}
+
+.navigation_class {
+	padding-top: 25px;
+	padding-left: 300px;
+	font-size: 14px;
+	color: white;
+	font-family: "Arial Black", Gadget, sans-serif;
+	display: block;
+}
+
+#mainBox {
+	top: 77px;
+	background: #FFF;
+	background-image: url(carousel_bag.png);/* Sets the background of the div to an image */
+	margin-left:auto;
+	margin-right:auto;
+	margin: 0 auto;
+	clear: left;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	box-shadow: 4px 4px 3px #666;
+	width: 860px;
+	height: 320px;
+	position: static;
+	border-color: #E1E1E1;
+	border-style: solid;
+	border-width: 2px;
+}
+
+.mainBoxTransparentButtons_class {
+	position: absolute;
+	top: 200px;
+	padding-left: 630px;					/* Position of the buttons in the main box */
+}
+.mainBoxTransparent_class {
+	width: 300px;				            /* Sets the width  */
+	height: 320px;				            /* Sets the height */
+	background-color: white;				/* */
+	border-top-right-radius: 5px;			/* */
+	opacity: 0.3;				            /* Adjusts the transparency to 30% */
+	filter: alpha(opacity=30);				/* Opacity hack for IE browsers */
+	float: right;				            /* Sets the transparent box to the far right */
+}
+
+.mainBoxTransparent_class h1 {
+	padding-top: 30px;
+	margin-left: 15px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size:18px;	
+	color: #07507D;
+	text-align: left;
+}
+
+.mainBoxTransparent_class h2 {
+	margin-left: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	text-align: left;
+}
+
+#mainBox img { 
+	display: block;
+	margin: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.button {
+ 	padding: 5px;
+	background-color: #dcdcdc;
+	border: 1px solid #666;
+	color:#000;
+	text-decoration:none;
+}
+
+.topSection_class {
+	height: 350px;
+}
+
+.articleArea_class {
+	position: relative;
+	background-image: -moz-linear-gradient(top, #F7F7F7, #FFF); 
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, from(#F7F7F7), to(#FFF));
+	width: 875px;
+	height: 350px;	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom: 10px;
+	border-color: #E1E1E1;
+	border-style: solid;
+	border-width: 1px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.articleArea_class p {
+	padding: 27px;
+}
+
+.articleArea_class h1{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #314e64;
+	margin-left: 14px;
+	text-align: left;
+	padding-top: 35px;
+}
+
+.articleArea_class h2{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 19px;
+	color: #086499;
+	margin-left: 70px;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.articleArea_class h3{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #434343;
+	margin-left: 70px;
+	text-align: left;
+	padding-bottom: 15px;
+}
+
+#articleArea_id {
+	-moz-column-count: 3;
+	-moz-column-gap: 2em;
+	-moz-column-rule: 1px solid #E1E1E1;
+	-moz-column-width: 100px;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 2em;
+	-webkit-column-rule: 1px solid #E1E1E1;
+	-webkit-column-width: 100px;
+}
+
+        /*<img src="carousel_bag.png" alt="carousel_image" width="860" height="320">*/

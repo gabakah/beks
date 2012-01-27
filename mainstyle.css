@@ -1,0 +1,85 @@
+.contentFrame
+{
+	background-image: url(images/center_background.jpg);
+	background-repeat: repeat-y;
+	background-color: #783837;
+	background-position: top left;
+	padding: 4px 4px 4px 4px;
+	color: #FFFFFF;
+	border : none;
+	width: 550;
+	height: 452;
+	font-family: Arial, helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+.contentStyle
+{
+	color: #FFFFFF;
+	background-color : transparent;
+	font-family: Arial, helvetica, sans-serif;
+	font-size: 10pt;
+	text-align : justify;
+}
+
+.topFrame
+{
+	background-image: url(images/top_background.jpg);
+	background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	background-position: top left;
+	padding: none;
+	color: #FFFFFF;
+	width: 550;
+	height: 180;
+}
+
+.leftFrame
+{
+	background-image: url(images/left_background.jpg);
+	background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	background-position: top right;
+	padding: 4px 4px 4px 4px;
+	width: 231;
+	height: 632;
+}
+
+.vertSeparator
+{
+	background-image: url(images/vert_separator.gif);
+	background-repeat: repeat-y;
+	background-color: #000000;
+	background-position: top right;
+	padding: 4px 4px 4px 4px;
+	width: 10;
+	height: 632;
+}
+
+.nobgi
+{
+	background-image: none;
+}
+
+.greyedLink
+{
+	background-color: #85A168;
+}
+
+a,a:visited
+{
+	color: #B0D48A;
+}
+
+a:hover
+{
+	color: red;
+}
+
+.footertxt
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	background-color: #6E839C;
+	color: white;
+}

@@ -1,0 +1,24 @@
+libname capdb '/var/opt/local/perf/mxg/daily/mvs/car';
+libname cspin '/var/opt/local/perf/mxgwork/spin/car';
+libname flpdb '/var/opt/local/perf/mxg/daily/mvs/fla';
+libname fspin '/var/opt/local/perf/mxgwork/spin/fla';
+libname cidb2 '/var/opt/local/perf/mxg/daily/db2/cims';
+libname pldb2 '/var/opt/local/perf/mxg/daily/db2/plnt';
+libname fpdb2 '/var/opt/local/perf/mxg/daily/db2/fpca';
+libname ondb2 '/var/opt/local/perf/mxg/daily/db2/onls';
+libname cicic '/var/opt/local/perf/mxg/daily/cics/cims';
+libname plcic '/var/opt/local/perf/mxg/daily/cics/plnt';
+libname fpcic '/var/opt/local/perf/mxg/daily/cics/fpca';
+
+proc datasets library=capdb kill;
+proc datasets library=flpdb kill;
+proc datasets library=cidb2 kill;
+proc datasets library=pldb2 kill;
+proc datasets library=ondb2 kill;
+proc datasets library=fpdb2 kill;
+proc datasets library=cicic kill;
+proc datasets library=plcic kill;
+proc datasets library=fpcic kill;
+proc datasets library=cspin kill;
+proc datasets library=fspin kill;
+quit;
